@@ -21,3 +21,9 @@ def d2x(f,x):
                  if(i!=0 and i!=nx-1):
                      Dxx[i]=(f[i+1]-2*f[i]+f[i-1])/(dx**2)
     return Dxx
+#create grid
+xmin=0
+xmax=np.pi*3
+Nx=100
+x=np.linspace(xmin,xmax,Nx-1)
+f=np.cos(x)
