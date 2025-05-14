@@ -27,3 +27,13 @@ xmax=np.pi*3
 Nx=100
 x=np.linspace(xmin,xmax,Nx-1)
 f=np.cos(x)
+
+#initial guess
+un=-np.zeros(Nx-1)
+
+#pseudo time integration loop
+dt=0.001
+for j in range(0,4000):
+    un=dt*(d2x(un,x)-f)+un
+    un[0]=-2
+    un[-1]=2
