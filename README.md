@@ -1,1 +1,1 @@
-an implementation of the Relaxation methods
+An implementation of the Relaxation method.
