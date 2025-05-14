@@ -37,3 +37,17 @@ for j in range(0,4000):
     un=dt*(d2x(un,x)-f)+un
     un[0]=-2
     un[-1]=2
+#analytical solution
+ua=-np.cos(x)+2/(3*np.pi)*x-1
+#plotting results
+ax1 = plt.subplots(1, sharex=True, figsize=(10,6))
+plt.plot(x,ua,color='black',linestyle='-',linewidth=3,label="$u_a(t)$")
+plt.plot(x,un,color='green',linestyle='-.',linewidth=3,label="$u_n(t)$")
+plt.xlabel("t",fontsize=18)
+plt.ylabel(r' ',fontsize=18,labelpad=20).set_rotation(0)
+plt.xlim([xmin,xmax]) 
+plt.xticks(fontsize= 17)
+plt.yticks(fontsize= 17) 
+plt.legend(loc=2,fontsize=19,handlelength=3) 
+plt.savefig("relax.png",dpi=200)
+plt.show()
